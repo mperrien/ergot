@@ -1,0 +1,7 @@
+.main-navigation {
+  .menu-toggle {
+    @media (min-width: 30em) {
+      display: none;
+    }
+  }
+}
