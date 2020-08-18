@@ -1,4 +1,18 @@
 @import url(/Users/marc/Documents/Perso/2020/Julie/ErgOT/site/app/public/wp-content/themes/ergot/sass/vendors/_s.style.css);
+.screen-reader-text {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
 .button {
   background-color: blue;
 }
