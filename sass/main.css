@@ -1,4 +1,5 @@
 @import url(/Users/marc/Documents/Perso/2020/Julie/ErgOT/site/app/public/wp-content/themes/ergot/sass/vendors/_s.style.css);
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat:400,400i,600,600i&display=swap");
 .screen-reader-text {
   position: absolute;
   padding: 0;
