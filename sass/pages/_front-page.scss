@@ -4,26 +4,36 @@
       position: relative;
 
       margin: 4em 0;
+
+      color: white;
       &__content {
         position: relative;
+        z-index: 1;
       }
       &__title {
         margin: 0 0 1rem;
 
         font-size: 3.5em;
         font-weight: 600;
+        line-height: 1;
+      }
+      &__text {
+        font-size: 1.25em;
       }
       .button {
         position: absolute;
-        left: 2em;
         bottom: -1.75em;
       }
       &__image {
         @include rounded;
         @include shadow;
 
+        position: relative;
+        z-index: 2;
+
         overflow: hidden;
         img {
+          display: block;
           height: 100%;
           width: 100%;
           object-fit: cover;
@@ -31,12 +41,14 @@
       }
       &--kids {
         height: 35em;
-        color: white;
         .audience__content {
           padding: 4em 4em 2em 2em;
           width: 29em;
 
           background-color: $orange-500;
+        }
+        .button {
+          left: 2em;
         }
         .audience__image {
           position: absolute;
@@ -45,6 +57,49 @@
 
           height: 33em;
           width: calc(100% - 27em);
+        }
+      }
+      &--adults {
+        height: 31em;
+        .audience__content {
+          position: absolute;
+          top: 6em;
+          right: 0;
+
+          padding: 4em 2em 2em 9em;
+          width: 49em;
+
+          background-color: $purple-500;
+        }
+        .button {
+          left: 9em;
+        }
+        .audience__image {
+          height: 24em;
+          width: calc(100% - 42em);
+        }
+      }
+      &--elderly {
+        height: 55em;
+        .audience__content {
+          position: absolute;
+          top: 20em;
+          left: 50%;
+          transform: translateX(-30em);
+
+          padding: 5em 2em 2em;
+          width: 29em;
+
+          background-color: $blue-900;
+        }
+        .button {
+          left: 2em;
+        }
+        .audience__image {
+          height: 24em;
+          width: 52em;
+          margin-right: auto;
+          margin-left: auto;
         }
       }
     }

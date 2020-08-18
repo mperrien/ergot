@@ -34,4 +34,12 @@
       color: $orange-500;
     }
   }
+
+  &--blue {
+    &,
+    &:visited,
+    &:hover {
+      color: $blue-900;
+    }
+  }
 }
