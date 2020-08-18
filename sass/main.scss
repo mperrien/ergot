@@ -1,0 +1,27 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+// @import 'abstracts/colors';
+// @import 'abstracts/variables';
+
+// 2. Vendors
+@import 'vendors/s.style';
+
+// 3. Base stuff
+// @import 'base/box-model';
+// @import 'base/typography';
+// @import 'base/helpers';
+
+// 4. Layout-related sections
+@import 'layout/layout';
+
+// 5. Components
+@import 'components/button';
+
+
+// 6. Page-specific styles
+// @import 'pages/page';
+
+// 7. Themes
+// @import
+//   'themes/default';
