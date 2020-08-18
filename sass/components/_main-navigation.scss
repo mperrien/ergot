@@ -1,7 +1,23 @@
 .main-navigation {
+  position: absolute;
+  top: 1em;
+  left: 2em;
+
+  width: auto;
   .menu-toggle {
     @media (min-width: 30em) {
       display: none;
+    }
+  }
+  .menu {
+    li:not(last-child) {
+      margin-right: 2em;
+    }
+    a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
     }
   }
 }

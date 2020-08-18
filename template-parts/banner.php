@@ -12,12 +12,18 @@
   <div class="page-banner__content">
     <?php
       the_title( '<h1 class="page-title">', '</h1>' );
-      the_content();
+    ?>
+    <div class="page-banner__text copy">
+      <?php the_content(); ?>
+    </div>
+    <?php
       $button = get_field('main-button');
       if ($button) : ?>
-        <a href="<?php echo esc_url($button['url']); ?>" class="button">
-          <?php echo esc_html($button['text']); ?>
-        </a>
+        <div class="page-banner__cta">
+          <a href="<?php echo esc_url($button['link']); ?>" class="button">
+            <?php echo esc_html($button['text']); ?>
+          </a>
+        </div>
       <?php endif;
     ?>
   </div>

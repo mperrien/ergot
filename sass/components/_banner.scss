@@ -1,0 +1,35 @@
+.page-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  height: 100vh;
+  overflow: hidden;
+  .page-title {
+    margin: 1rem 0;
+
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 1;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em 2em 2em;
+
+    background-color: $purple-500;
+
+    color: white;
+  }
+  &__cta {
+    margin-top: 3em;
+  }
+  &__image {
+    height: 100vh;
+    img {
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

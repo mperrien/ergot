@@ -35,7 +35,8 @@
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
+    </nav><!-- #site-navigation -->
+    <!--
     <div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -48,6 +49,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif; ?>
-		</div><!-- .site-branding -->
+    </div> -->
     
+
 	</header><!-- #masthead -->

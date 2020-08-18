@@ -1,11 +1,13 @@
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-// @import 'abstracts/colors';
-// @import 'abstracts/variables';
+@import
+'abstracts/colors',
+'abstracts/mixins';
 
 // 2. Vendors
-@import 'vendors/s.style';
+@import
+'vendors/s.style';
 
 // 3. Base stuff
 // @import 'base/box-model';
@@ -18,7 +20,9 @@
 
 // 5. Components
 @import
-'components/button'
+'components/banner',
+'components/button',
+'components/main-navigation';
 
 
 // 6. Page-specific styles
