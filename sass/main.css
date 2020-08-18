@@ -983,6 +983,13 @@ body {
   max-width: 40em;
 }
 
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 80em;
+  width: 100%;
+}
+
 .page-banner {
   display: -ms-grid;
   display: grid;
@@ -1038,14 +1045,12 @@ body {
   padding: 1em 2em;
   background-color: white;
   border-radius: 2em;
-  color: #630069;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .button:hover {
-  color: #630069;
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }
@@ -1053,6 +1058,14 @@ body {
 .button:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+.button--purple, .button--purple:visited, .button--purple:hover {
+  color: #630069;
+}
+
+.button--orange, .button--orange:visited, .button--orange:hover {
+  color: #d9660d;
 }
 
 .main-navigation {
@@ -1077,5 +1090,59 @@ body {
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.page-template-template-front .accompaniment .audience {
+  position: relative;
+  margin: 4em 0;
+}
+
+.page-template-template-front .accompaniment .audience__content {
+  position: relative;
+}
+
+.page-template-template-front .accompaniment .audience__title {
+  margin: 0 0 1rem;
+  font-size: 3.5em;
+  font-weight: 600;
+}
+
+.page-template-template-front .accompaniment .audience .button {
+  position: absolute;
+  left: 2em;
+  bottom: -1.75em;
+}
+
+.page-template-template-front .accompaniment .audience__image {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+}
+
+.page-template-template-front .accompaniment .audience__image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-template-template-front .accompaniment .audience--kids {
+  height: 35em;
+  color: white;
+}
+
+.page-template-template-front .accompaniment .audience--kids .audience__content {
+  padding: 4em 4em 2em 2em;
+  width: 29em;
+  background-color: #d9660d;
+}
+
+.page-template-template-front .accompaniment .audience--kids .audience__image {
+  position: absolute;
+  top: 2em;
+  right: 0;
+  height: 33em;
+  width: calc(100% - 27em);
 }
 /*# sourceMappingURL=main.css.map */

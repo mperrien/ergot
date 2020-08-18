@@ -1,0 +1,52 @@
+.page-template-template-front {
+  .accompaniment {
+    .audience {
+      position: relative;
+
+      margin: 4em 0;
+      &__content {
+        position: relative;
+      }
+      &__title {
+        margin: 0 0 1rem;
+
+        font-size: 3.5em;
+        font-weight: 600;
+      }
+      .button {
+        position: absolute;
+        left: 2em;
+        bottom: -1.75em;
+      }
+      &__image {
+        @include rounded;
+        @include shadow;
+
+        overflow: hidden;
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      &--kids {
+        height: 35em;
+        color: white;
+        .audience__content {
+          padding: 4em 4em 2em 2em;
+          width: 29em;
+
+          background-color: $orange-500;
+        }
+        .audience__image {
+          position: absolute;
+          top: 2em;
+          right: 0;
+
+          height: 33em;
+          width: calc(100% - 27em);
+        }
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@
       $button = get_field('main-button');
       if ($button) : ?>
         <div class="page-banner__cta">
-          <a href="<?php echo esc_url($button['link']); ?>" class="button">
+          <a href="<?php echo esc_url($button['link']); ?>" class="button button--purple">
             <?php echo esc_html($button['text']); ?>
           </a>
         </div>

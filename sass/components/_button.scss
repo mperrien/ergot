@@ -7,17 +7,31 @@
   background-color: white;
   border-radius: 2em;
 
-  color: $purple-500;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
 
   &:hover {
-    color: $purple-500;
     transform: translateY(1px);
   }
 
   &:active {
     transform: translateY(2px);
+  }
+
+  &--purple {
+    &,
+    &:visited,
+    &:hover {
+      color: $purple-500;
+    }
+  }
+
+  &--orange {
+    &,
+    &:visited,
+    &:hover {
+      color: $orange-500;
+    }
   }
 }
