@@ -5,11 +5,15 @@
 
   width: auto;
   .menu-toggle {
-    @media (min-width: 30em) {
+    @media (min-width: 40em) {
       display: none;
     }
   }
   .menu {
+    display: none;
+    @media (min-width: 40em) {
+      display: flex;
+    }
     li:not(last-child) {
       margin-right: 2em;
     }
