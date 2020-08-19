@@ -172,45 +172,97 @@
 
       position: relative;
 
-      margin-bottom: -6em;
-
+      margin-bottom: -3em;
+      width: 100vw;
+      @media (min-width: 40em) {
+        margin-bottom: -4em;
+      }
+      @media (min-width: 50em) {
+        margin-bottom: -6em;
+      }
       img {
         display: block;
-        height: 37em;
+        height: 16em;
         width: 100%;
 
+        object-fit: cover;
+        @media (min-width: 40em) {
+          height: 22em;
+        }
+        @media (min-width: 50em) {
+          height: 30em;
+        }
+        @media (min-width: 60em) {
+          height: 37em;
+        }
       }
-      display: block;
       &::before {
         content: "";
 
         position: absolute;
-        top: calc(100% - 1em);
+        top: calc(100% - 3em);
         right: 0;
         z-index: -1;
 
         display: block;
         height: 5em;
-        width: 60%;
+        width: 27em;
 
         background-color: $purple-500;
+        @media (min-width: 40em) {
+          top: calc(100% - 2em);
+
+          width: 33em;
+        }
+        @media (min-width: 50em) {
+          top: calc(100% - 1em);
+
+          width: 45em;
+        }
+        @media (min-width: 60em) {
+          top: calc(100% - 1em);
+
+          width: 50em;
+        }
       }
     }
     &__title {
       @include text-shadow;
       
-      transform: translateY(-10%);
+      transform: translateY(7%);
 
-      margin: 0;
+      margin: 0 1rem 0 0;
 
       color: white;
-      font-size: 8em;
+      font-size: 3em;
       font-weight: 600;
       text-align: right;
+      @media (min-width: 30em) {
+        transform: translateY(-8%);
+
+        font-size: 4em;
+      }
+      @media (min-width: 40em) {
+        transform: translateY(-5%);
+
+        font-size: 5em;
+      }
+      @media (min-width: 50em) {
+        transform: translateY(-4%);
+
+        font-size: 7em;
+      }
+      @media (min-width: 60em) {
+        transform: translateY(-10%);
+
+        font-size: 8em;
+      }
     }
     &__content {
       margin-right: auto;
       margin-left: auto;
+      padding-right: 1em;
+      padding-left: 1em;
     }
     &__cta {
       text-align: center;

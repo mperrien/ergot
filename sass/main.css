@@ -1440,42 +1440,129 @@ body {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
   position: relative;
-  margin-bottom: -6em;
-  display: block;
+  margin-bottom: -3em;
+  width: 100vw;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .artesania__image {
+    margin-bottom: -4em;
+  }
+}
+
+@media (min-width: 50em) {
+  .page-template-template-front .artesania__image {
+    margin-bottom: -6em;
+  }
 }
 
 .page-template-template-front .artesania__image img {
   display: block;
-  height: 37em;
+  height: 16em;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .artesania__image img {
+    height: 22em;
+  }
+}
+
+@media (min-width: 50em) {
+  .page-template-template-front .artesania__image img {
+    height: 30em;
+  }
+}
+
+@media (min-width: 60em) {
+  .page-template-template-front .artesania__image img {
+    height: 37em;
+  }
 }
 
 .page-template-template-front .artesania__image::before {
   content: "";
   position: absolute;
-  top: calc(100% - 1em);
+  top: calc(100% - 3em);
   right: 0;
   z-index: -1;
   display: block;
   height: 5em;
-  width: 60%;
+  width: 27em;
   background-color: #630069;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .artesania__image::before {
+    top: calc(100% - 2em);
+    width: 33em;
+  }
+}
+
+@media (min-width: 50em) {
+  .page-template-template-front .artesania__image::before {
+    top: calc(100% - 1em);
+    width: 45em;
+  }
+}
+
+@media (min-width: 60em) {
+  .page-template-template-front .artesania__image::before {
+    top: calc(100% - 1em);
+    width: 50em;
+  }
 }
 
 .page-template-template-front .artesania__title {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
-  margin: 0;
+  -webkit-transform: translateY(7%);
+          transform: translateY(7%);
+  margin: 0 1rem 0 0;
   color: white;
-  font-size: 8em;
+  font-size: 3em;
   font-weight: 600;
   text-align: right;
+}
+
+@media (min-width: 30em) {
+  .page-template-template-front .artesania__title {
+    -webkit-transform: translateY(-8%);
+            transform: translateY(-8%);
+    font-size: 4em;
+  }
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .artesania__title {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+    font-size: 5em;
+  }
+}
+
+@media (min-width: 50em) {
+  .page-template-template-front .artesania__title {
+    -webkit-transform: translateY(-4%);
+            transform: translateY(-4%);
+    font-size: 7em;
+  }
+}
+
+@media (min-width: 60em) {
+  .page-template-template-front .artesania__title {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    font-size: 8em;
+  }
 }
 
 .page-template-template-front .artesania__content {
   margin-right: auto;
   margin-left: auto;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .page-template-template-front .artesania__cta {
