@@ -27,14 +27,25 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ergot' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'menu' => 'FR_top',
-				)
-			);
-			?>
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ergot' ); ?></button>
+      <?php
+        $page = get_page_by_path( 'es' );
+        $id = $page->ID;
+        $ancestors = get_post_ancestors($post->ID);
+        if (in_array($id, $ancestors) || is_page($id)) {
+          wp_nav_menu(
+            array(
+              'menu' => 'ES_top',
+            )
+          );
+        } else {
+          wp_nav_menu(
+            array(
+              'menu' => 'FR_top',
+            )
+          );
+        }
+      ?>
     </nav><!-- #site-navigation -->
     <!--
     <div class="site-branding">
