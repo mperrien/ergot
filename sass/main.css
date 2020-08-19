@@ -1122,11 +1122,20 @@ body {
 .site-footer {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+}
+
+@media (min-width: 50em) {
+  .site-footer {
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
 }
 
 .site-footer__quote {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1135,6 +1144,13 @@ body {
           align-items: flex-end;
   padding: 2em;
   background-color: #ffa600;
+}
+
+@media (min-width: 50em) {
+  .site-footer__quote {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
 }
 
 .site-footer__quote a {

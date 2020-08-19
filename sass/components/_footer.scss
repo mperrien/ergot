@@ -1,13 +1,21 @@
 .site-footer {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: 100%;
+
+  @media (min-width: 50em) {
+    grid-template-columns: repeat(2, 50%);
+  }
   
   &__quote {
+    grid-row-start: 2;
     display: flex;
     align-items: flex-end;
     padding: 2em;
 
     background-color: $yellow-500;
+    @media (min-width: 50em) {
+      grid-row-start: 1;
+    }
     a {
       color: $text-base;
     }
