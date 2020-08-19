@@ -11,21 +11,18 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ergot' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ergot' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ergot' ), 'ergot', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<footer class="site-footer">
+  <?php
+    $page = get_page_by_path( 'es' );
+    $id = $page->ID;
+    $ancestors = get_post_ancestors($post->ID);
+    if (in_array($id, $ancestors) || is_page($id)) {
+      get_template_part( 'template-parts/footer', 'spanish' );
+    } else {
+      get_template_part( 'template-parts/footer', 'french' );
+    }
+  ?>
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
