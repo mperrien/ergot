@@ -1000,8 +1000,18 @@ body {
   display: grid;
   -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
+}
+
+.page-banner__logo {
+  margin: 0 0 2em;
+  width: 6em;
+}
+
+.page-banner__logo--simple {
+  margin-bottom: 0;
+  width: 4em;
 }
 
 .page-banner .page-title {
@@ -1032,7 +1042,9 @@ body {
 }
 
 .page-banner__image {
-  height: 100vh;
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
 }
 
 .page-banner__image img {
