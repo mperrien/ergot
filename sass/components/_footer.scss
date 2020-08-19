@@ -1,0 +1,54 @@
+.site-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  
+  &__quote {
+    display: flex;
+    align-items: flex-end;
+    padding: 2em;
+
+    background-color: $yellow-500;
+    a {
+      color: $text-base;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 2em;
+
+    background-color: $blue-300;
+    
+    .menu {
+      margin: 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
+    .menu-item {
+      text-align: right;
+
+      &:not(last-child) {
+        margin-bottom: 1em;
+      }
+
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+        &,
+        &:hover,
+        &:visited {
+          color: white;
+        }
+      }
+    }
+  }
+  &__logo {
+    margin-bottom: 2em;
+    width: 6em;
+  }
+}
