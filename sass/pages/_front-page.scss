@@ -1,11 +1,18 @@
 .page-template-template-front {
   .accompaniment {
+    @media (min-width: 40em) {
+      padding: 0 1em;
+    }
     .audience {
       position: relative;
 
-      margin: 4em 0;
+      margin: 0;
 
       color: white;
+      
+      @media (min-width: 40em) {
+        margin: 4em 0;
+      }
       &__content {
         position: relative;
         z-index: 1;
@@ -25,13 +32,16 @@
         bottom: -1.75em;
       }
       &__image {
-        @include rounded;
         @include shadow;
 
         position: relative;
-        z-index: 2;
 
         overflow: hidden;
+        @media (min-width: 40em) {
+          @include rounded;
+
+          z-index: 2;
+        }
         img {
           display: block;
           height: 100%;
@@ -40,66 +50,117 @@
         }
       }
       &--kids {
-        height: 35em;
+        @media (min-width: 40em) {
+          height: 35em;
+        }
         .audience__content {
-          padding: 4em 4em 2em 2em;
-          width: 29em;
+          position: relative;
+          z-index: 2;
+
+          padding: 2em;
 
           background-color: $orange-500;
+          @media (min-width: 40em) {
+            z-index: 1;
+
+            padding: 4em 4em 2em 2em;
+            width: 29em;
+          }
         }
         .button {
           left: 2em;
         }
         .audience__image {
-          position: absolute;
-          top: 2em;
-          right: 0;
+          height: auto;
+          width: 100%;
+          @media (min-width: 40em) {
+            position: absolute;
+            top: 2em;
+            right: 0;
 
-          height: 33em;
-          width: calc(100% - 27em);
+            height: 33em;
+            width: calc(100% - 27em);
+          }
         }
       }
       &--adults {
-        height: 31em;
+        @media (min-width: 40em) {
+          height: 35em;
+        }
+        @media (min-width: 70em) {
+          height: 31em;
+        }
         .audience__content {
-          position: absolute;
-          top: 6em;
-          right: 0;
-
-          padding: 4em 2em 2em 9em;
-          width: 49em;
+          padding: 2em;
 
           background-color: $purple-500;
+
+          @media (min-width: 40em) {
+            position: absolute;
+            top: 6em;
+            right: 0;
+
+            padding: 4em 2em 2em 9em;
+            width: 33em;
+            max-width: 49em;
+          }
+          @media (min-width: 70em) {
+            width: 100%;
+          }
         }
         .button {
-          left: 9em;
+          left: 2em;
+
+          @media (min-width: 40em) {
+            left: 9em;
+          }
         }
         .audience__image {
-          height: 24em;
-          width: calc(100% - 42em);
+          height: auto;
+          width: 100%;
+          @media (min-width: 40em) {
+            height: 24em;
+            width: calc(100% - 25em);
+          }
+          @media (min-width: 70em) {
+            height: 24em;
+            width: calc(100% - 42em);
+          }
         }
       }
       &--elderly {
-        height: 55em;
+        @media (min-width: 40em) {
+          height: 55em;
+        }
         .audience__content {
-          position: absolute;
-          top: 20em;
-          left: 50%;
-          transform: translateX(-30em);
-
-          padding: 5em 2em 2em;
-          width: 29em;
+          padding: 2em;
 
           background-color: $blue-900;
+          @media (min-width: 40em) {
+            position: absolute;
+            top: 20em;
+            left: 0;
+
+            padding: 5em 2em 2em;
+            width: 29em;
+          }
+          @media (min-width: 70em) {
+            left: 50%;
+            transform: translateX(-30em);
+          }
         }
         .button {
           left: 2em;
         }
         .audience__image {
-          height: 24em;
-          width: 52em;
-          margin-right: auto;
-          margin-left: auto;
+          height: auto;
+          width: 100%;
+          @media (min-width: 40em) {
+            height: 24em;
+            max-width: 52em;
+            margin-right: auto;
+            margin-left: auto;
+          }
         }
       }
     }

@@ -1221,10 +1221,22 @@ body {
   text-transform: uppercase;
 }
 
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment {
+    padding: 0 1em;
+  }
+}
+
 .page-template-template-front .accompaniment .audience {
   position: relative;
-  margin: 4em 0;
+  margin: 0;
   color: white;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience {
+    margin: 4em 0;
+  }
 }
 
 .page-template-template-front .accompaniment .audience__content {
@@ -1249,12 +1261,17 @@ body {
 }
 
 .page-template-template-front .accompaniment .audience__image {
-  border-radius: 5px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
   position: relative;
-  z-index: 2;
   overflow: hidden;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience__image {
+    border-radius: 5px;
+    z-index: 2;
+  }
 }
 
 .page-template-template-front .accompaniment .audience__image img {
@@ -1265,14 +1282,25 @@ body {
      object-fit: cover;
 }
 
-.page-template-template-front .accompaniment .audience--kids {
-  height: 35em;
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--kids {
+    height: 35em;
+  }
 }
 
 .page-template-template-front .accompaniment .audience--kids .audience__content {
-  padding: 4em 4em 2em 2em;
-  width: 29em;
+  position: relative;
+  z-index: 2;
+  padding: 2em;
   background-color: #d9660d;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--kids .audience__content {
+    z-index: 1;
+    padding: 4em 4em 2em 2em;
+    width: 29em;
+  }
 }
 
 .page-template-template-front .accompaniment .audience--kids .button {
@@ -1280,48 +1308,110 @@ body {
 }
 
 .page-template-template-front .accompaniment .audience--kids .audience__image {
-  position: absolute;
-  top: 2em;
-  right: 0;
-  height: 33em;
-  width: calc(100% - 27em);
+  height: auto;
+  width: 100%;
 }
 
-.page-template-template-front .accompaniment .audience--adults {
-  height: 31em;
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--kids .audience__image {
+    position: absolute;
+    top: 2em;
+    right: 0;
+    height: 33em;
+    width: calc(100% - 27em);
+  }
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--adults {
+    height: 35em;
+  }
+}
+
+@media (min-width: 70em) {
+  .page-template-template-front .accompaniment .audience--adults {
+    height: 31em;
+  }
 }
 
 .page-template-template-front .accompaniment .audience--adults .audience__content {
-  position: absolute;
-  top: 6em;
-  right: 0;
-  padding: 4em 2em 2em 9em;
-  width: 49em;
+  padding: 2em;
   background-color: #630069;
 }
 
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--adults .audience__content {
+    position: absolute;
+    top: 6em;
+    right: 0;
+    padding: 4em 2em 2em 9em;
+    width: 33em;
+    max-width: 49em;
+  }
+}
+
+@media (min-width: 70em) {
+  .page-template-template-front .accompaniment .audience--adults .audience__content {
+    width: 100%;
+  }
+}
+
 .page-template-template-front .accompaniment .audience--adults .button {
-  left: 9em;
+  left: 2em;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--adults .button {
+    left: 9em;
+  }
 }
 
 .page-template-template-front .accompaniment .audience--adults .audience__image {
-  height: 24em;
-  width: calc(100% - 42em);
+  height: auto;
+  width: 100%;
 }
 
-.page-template-template-front .accompaniment .audience--elderly {
-  height: 55em;
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--adults .audience__image {
+    height: 24em;
+    width: calc(100% - 25em);
+  }
+}
+
+@media (min-width: 70em) {
+  .page-template-template-front .accompaniment .audience--adults .audience__image {
+    height: 24em;
+    width: calc(100% - 42em);
+  }
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--elderly {
+    height: 55em;
+  }
 }
 
 .page-template-template-front .accompaniment .audience--elderly .audience__content {
-  position: absolute;
-  top: 20em;
-  left: 50%;
-  -webkit-transform: translateX(-30em);
-          transform: translateX(-30em);
-  padding: 5em 2em 2em;
-  width: 29em;
+  padding: 2em;
   background-color: #053169;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--elderly .audience__content {
+    position: absolute;
+    top: 20em;
+    left: 0;
+    padding: 5em 2em 2em;
+    width: 29em;
+  }
+}
+
+@media (min-width: 70em) {
+  .page-template-template-front .accompaniment .audience--elderly .audience__content {
+    left: 50%;
+    -webkit-transform: translateX(-30em);
+            transform: translateX(-30em);
+  }
 }
 
 .page-template-template-front .accompaniment .audience--elderly .button {
@@ -1329,10 +1419,17 @@ body {
 }
 
 .page-template-template-front .accompaniment .audience--elderly .audience__image {
-  height: 24em;
-  width: 52em;
-  margin-right: auto;
-  margin-left: auto;
+  height: auto;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience--elderly .audience__image {
+    height: 24em;
+    max-width: 52em;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .page-template-template-front .artesania {
