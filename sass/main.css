@@ -1072,6 +1072,14 @@ body {
   color: #053169;
 }
 
+.button--reverse, .button--reverse:visited, .button--reverse:hover {
+  color: white;
+}
+
+.button--reverse-purple {
+  background-color: #630069;
+}
+
 .main-navigation {
   position: absolute;
   top: 1em;
@@ -1208,5 +1216,55 @@ body {
   width: 52em;
   margin-right: auto;
   margin-left: auto;
+}
+
+.page-template-template-front .artesania {
+  margin-bottom: 4em;
+}
+
+.page-template-template-front .artesania__image {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  position: relative;
+  margin-bottom: -6em;
+  display: block;
+}
+
+.page-template-template-front .artesania__image img {
+  display: block;
+  height: 37em;
+  width: 100%;
+}
+
+.page-template-template-front .artesania__image::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 1em);
+  right: 0;
+  z-index: -1;
+  display: block;
+  height: 5em;
+  width: 60%;
+  background-color: #630069;
+}
+
+.page-template-template-front .artesania__title {
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+  margin: 0;
+  color: white;
+  font-size: 8em;
+  font-weight: 600;
+  text-align: right;
+}
+
+.page-template-template-front .artesania__content {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-template-template-front .artesania__cta {
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

@@ -110,11 +110,43 @@ get_header();
                   src="<?php echo $large; ?>" alt="" loading="lazy">
             </div>
           </section>
-        <?php endif;
-      ?>
+        <?php endif; ?>
       </div>
-
-    <?php
+      <?php
+      $artesania = get_field('artesania');
+      if ($artesania) : ?>
+      <div class="artesania">
+        <div class="artesania__image">
+        <?php
+          $image = $artesania['image'];
+          $small = $image['sizes']['medium'];
+          $small_width = $image['sizes']['medium-width'];
+          $medium = $image['sizes']['medium_large'];
+          $medium_width = $image['sizes']['medium_large-width'];
+          $large = $image['url'];
+          $large_width = $image['width'];
+        ?>
+        <img srcset="<?php echo $small; ?> <?php echo $small_width; ?>w,
+                      <?php echo $medium; ?> <?php echo $medium_width; ?>w,
+                      <?php echo $large; ?> <?php echo $large_width; ?>w"
+              sizes="100%"
+              src="<?php echo $large; ?>" alt="" loading="lazy">
+        </div>
+        <div class="container">
+          <h2 class="artesania__title">
+            <?php echo esc_html($artesania['title']); ?>
+          </h2>
+          <div class="artesania__content copy">
+            <?php echo $artesania['content']; ?>
+          </div>
+          <div class="artesania__cta">
+            <a class="button button--reverse button--reverse-purple" href="<?php echo esc_url($artesania['button-link']); ?>">
+              <?php echo esc_html($artesania['button-text']); ?>
+            </a>
+          </div>
+        </div>
+      </div>
+      <?php endif;
 		endwhile; // End of the loop.
 		?>
 

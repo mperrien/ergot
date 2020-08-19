@@ -42,4 +42,14 @@
       color: $blue-900;
     }
   }
+  &--reverse {
+    &,
+    &:visited,
+    &:hover {
+      color: white;
+    }
+    &-purple {
+      background-color: $purple-500;
+    }
+  }
 }

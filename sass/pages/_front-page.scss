@@ -104,4 +104,55 @@
       }
     }
   }
+  .artesania {
+    margin-bottom: 4em;
+    &__image {
+      @include shadow;
+
+      position: relative;
+
+      margin-bottom: -6em;
+
+      img {
+        display: block;
+        height: 37em;
+        width: 100%;
+
+      }
+      display: block;
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: calc(100% - 1em);
+        right: 0;
+        z-index: -1;
+
+        display: block;
+        height: 5em;
+        width: 60%;
+
+        background-color: $purple-500;
+      }
+    }
+    &__title {
+      @include text-shadow;
+      
+      transform: translateY(-10%);
+
+      margin: 0;
+
+      color: white;
+      font-size: 8em;
+      font-weight: 600;
+      text-align: right;
+    }
+    &__content {
+      margin-right: auto;
+      margin-left: auto;
+    }
+    &__cta {
+      text-align: center;
+    }
+  }
 }
