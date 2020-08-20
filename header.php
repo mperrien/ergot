@@ -42,10 +42,8 @@
         ?> 
       </button>
       <?php
-        $page = get_page_by_path( 'es' );
-        $id = $page->ID;
-        $ancestors = get_post_ancestors($post->ID);
-        if (in_array($id, $ancestors) || is_page($id)) {
+        $lang = wp_cache_get( 'lang' );
+        if ($lang === 'es') {
           wp_nav_menu(
             array(
               'menu' => 'ES_top',
