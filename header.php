@@ -11,7 +11,17 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<?php
+  $page = get_page_by_path( 'es' );
+  $id = $page->ID;
+  $ancestors = get_post_ancestors($post->ID);
+  if (in_array($id, $ancestors) || is_page($id)) {
+    wp_cache_set( 'lang', 'es' );
+  } else {
+    wp_cache_set( 'lang', 'fr' );
+  }
+?> 
+<html lang="<?php echo wp_cache_get('lang'); ?>">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,14 +39,10 @@
 		<nav id="site-navigation" class="main-navigation">
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
         <?php
-          $page = get_page_by_path( 'es' );
-          $id = $page->ID;
-          $ancestors = get_post_ancestors($post->ID);
-          if (in_array($id, $ancestors) || is_page($id)) {
-            wp_cache_set( 'lang', 'es' );
+          $lang = wp_cache_get( 'lang' );
+          if ($lang === 'es') {
             the_field('menu-es', 'option');
           } else {
-            wp_cache_set( 'lang', 'fr' );
             the_field('menu-fr', 'option');
           }
         ?> 
