@@ -968,6 +968,11 @@ body {
   line-height: 1.5;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1;
+}
+
 .copy {
   max-width: 40em;
 }
@@ -1020,8 +1025,6 @@ body {
 .page-banner .page-title {
   margin: 1rem 0;
   font-size: 2em;
-  font-weight: 600;
-  line-height: 1;
 }
 
 @media (min-width: 40em) {
@@ -1060,6 +1063,28 @@ body {
 
 .page-banner__cta {
   margin-top: 3em;
+}
+
+.page-banner__nav {
+  margin-top: 3em;
+}
+
+.page-banner__nav a {
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.page-banner__nav a, .page-banner__nav a:hover, .page-banner__nav a:visited {
+  color: white;
+}
+
+.page-banner__nav a:hover {
+  text-decoration: underline;
+}
+
+.page-banner__nav a:not(last-child) {
+  margin-right: 2em;
 }
 
 .page-banner__image {
@@ -1293,6 +1318,70 @@ body {
   }
 }
 
+.page-template-template-accompaniment .audience {
+  margin: 6em 0;
+}
+
+.page-template-template-accompaniment .audience:nth-child(2n+1) .audience__title span,
+.page-template-template-accompaniment .audience:nth-child(2n+1) .audience__cta .button {
+  background-color: #d9660d;
+}
+
+.page-template-template-accompaniment .audience:nth-child(2n+2) .audience__title span,
+.page-template-template-accompaniment .audience:nth-child(2n+2) .audience__cta .button {
+  background-color: #630069;
+}
+
+.page-template-template-accompaniment .audience:nth-child(2n+3) .audience__title span,
+.page-template-template-accompaniment .audience:nth-child(2n+3) .audience__cta .button {
+  background-color: #053169;
+}
+
+.page-template-template-accompaniment .audience__image {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  height: 33em;
+  width: 100vw;
+  max-width: 55em;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.page-template-template-accompaniment .audience__image img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.page-template-template-accompaniment .audience__title {
+  margin-top: -.75em;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}
+
+.page-template-template-accompaniment .audience__title span {
+  display: inline-block;
+  padding: .75rem 2rem 1rem;
+}
+
+.page-template-template-accompaniment .audience__excerpt {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-template-template-accompaniment .audience__cta {
+  text-align: center;
+}
+
+.page-template-template-accompaniment .audience__cta .button, .page-template-template-accompaniment .audience__cta .button:visited, .page-template-template-accompaniment .audience__cta .button:hover {
+  color: white;
+}
+
 @media (min-width: 40em) {
   .page-template-template-front .accompaniment {
     padding: 0 1em;
@@ -1319,8 +1408,6 @@ body {
 .page-template-template-front .accompaniment .audience__title {
   margin: 0 0 1rem;
   font-size: 3.5em;
-  font-weight: 600;
-  line-height: 1;
 }
 
 .page-template-template-front .accompaniment .audience__text {
@@ -1594,7 +1681,6 @@ body {
   margin: 0 1rem 0 0;
   color: white;
   font-size: 3em;
-  font-weight: 600;
   text-align: right;
 }
 

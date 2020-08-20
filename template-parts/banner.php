@@ -31,6 +31,25 @@
         </div>
       <?php endif;
     ?>
+    <?php
+    if (is_page_template('template-accompaniment.php')) {
+      $args = array(
+        'post_type'      => 'page',
+        'posts_per_page' => -1,
+        'post_parent'    => $post->ID,
+        'order'          => 'ASC',
+        'orderby'        => 'menu_order'
+      );
+      $children = new WP_Query( $args );
+      if ( $children->have_posts() ) : ?>
+        <nav class="page-banner__nav">
+        <?php while ( $children->have_posts() ) : $children->the_post(); ?>
+          <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <?php endwhile; ?>
+        </nav>
+      <?php endif; wp_reset_postdata();
+    }
+    ?>
   </div>
   <div class="page-banner__image">
     <?php the_post_thumbnail(); ?>

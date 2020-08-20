@@ -33,8 +33,10 @@
           $id = $page->ID;
           $ancestors = get_post_ancestors($post->ID);
           if (in_array($id, $ancestors) || is_page($id)) {
+            wp_cache_set( 'lang', 'es' );
             the_field('menu-es', 'option');
           } else {
+            wp_cache_set( 'lang', 'fr' );
             the_field('menu-fr', 'option');
           }
         ?> 

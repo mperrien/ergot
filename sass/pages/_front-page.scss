@@ -21,8 +21,6 @@
         margin: 0 0 1rem;
 
         font-size: 3.5em;
-        font-weight: 600;
-        line-height: 1;
       }
       &__text {
         font-size: 1.25em;
@@ -235,7 +233,6 @@
 
       color: white;
       font-size: 3em;
-      font-weight: 600;
       text-align: right;
       @media (min-width: 30em) {
         transform: translateY(-8%);

@@ -21,8 +21,6 @@
     margin: 1rem 0;
 
     font-size: 2em;
-    font-weight: 600;
-    line-height: 1;
     @media (min-width: 40em) {
       font-size: 3em;
     }
@@ -46,6 +44,28 @@
   }
   &__cta {
     margin-top: 3em;
+  }
+  &__nav {
+    margin-top: 3em;
+    a {
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &,
+      &:hover,
+      &:visited {
+        color: white;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:not(last-child) {
+        margin-right: 2em
+      }
+    }
   }
   &__image {
     max-height: 40em;
