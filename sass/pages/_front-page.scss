@@ -170,13 +170,13 @@
 
       position: relative;
 
-      margin-bottom: -3em;
+      margin-bottom: -2em;
       width: 100vw;
       @media (min-width: 40em) {
-        margin-bottom: -4em;
+        margin-bottom: -3em;
       }
       @media (min-width: 50em) {
-        margin-bottom: -6em;
+        margin-bottom: -4em;
       }
       img {
         display: block;
@@ -240,6 +240,7 @@
         font-size: 4em;
       }
       @media (min-width: 40em) {
+        margin-bottom: 2rem;
         transform: translateY(-5%);
 
         font-size: 5em;

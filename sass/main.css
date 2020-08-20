@@ -1654,19 +1654,19 @@ ul {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
   position: relative;
-  margin-bottom: -3em;
+  margin-bottom: -2em;
   width: 100vw;
 }
 
 @media (min-width: 40em) {
   .page-template-template-front .artesania__image {
-    margin-bottom: -4em;
+    margin-bottom: -3em;
   }
 }
 
 @media (min-width: 50em) {
   .page-template-template-front .artesania__image {
-    margin-bottom: -6em;
+    margin-bottom: -4em;
   }
 }
 
@@ -1749,6 +1749,7 @@ ul {
 
 @media (min-width: 40em) {
   .page-template-template-front .artesania__title {
+    margin-bottom: 2rem;
     -webkit-transform: translateY(-5%);
             transform: translateY(-5%);
     font-size: 5em;
