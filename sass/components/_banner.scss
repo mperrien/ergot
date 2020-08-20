@@ -1,17 +1,20 @@
 .page-banner {
   display: grid;
   grid-template-columns: 100%;
-  min-height: 100vh;
   overflow: hidden;
   @media (min-width: 60em) {
     grid-template-columns: 65% 35%;
+    min-height: 100vh;
   }
   @media (min-width: 75em) {
     grid-template-columns: repeat(2, 50%);
   }
   &__logo {
-    margin: 2em 0;
+    margin: 0 0 2em;
     width: 6em;
+    @media (min-width: 40em) {
+      margin-top: 2em;
+    }
     &--simple {
       margin-bottom: 0;
       width: 4em;
@@ -46,11 +49,23 @@
     margin-top: 3em;
   }
   &__nav {
-    margin-top: 3em;
+    margin-top: 1em;
+    @media (min-width: 40em) {
+      margin-top: 3em;
+    }
     a {
+      clear: both;
+      float: left;
+      margin-bottom: 1em;
+
       font-weight: 600;
       text-decoration: none;
       text-transform: uppercase;
+
+      @media (min-width: 40em) {
+        float: none;
+        margin-bottom: 0;
+      }
 
       &,
       &:hover,

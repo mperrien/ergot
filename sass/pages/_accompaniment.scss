@@ -1,6 +1,17 @@
 .page-template-template-accompaniment {
+  .page-banner__image {
+    display: none;
+    @media (min-width: 60em) {
+      display: block;
+    }
+  }
   .audience {
-    margin: 6em 0;
+    margin: 0 0 6em;
+    &:first-child {
+      @media (min-width: 60em) {
+        margin-top: 6em;
+      }
+    }
     &:nth-child(2n+1) {
       .audience__title span,
       .audience__cta .button {
@@ -20,15 +31,18 @@
       }
     }
     &__image {
-      @include rounded;
       @include shadow;
 
       height: 33em;
       width: 100vw;
-      max-width: 55em;
+      max-width: 60em;
       margin-right: auto;
       margin-left: auto;
       overflow: hidden;
+
+      @media (min-width: 60em) {
+        @include rounded;
+      }
 
       img {
         display: block;
@@ -42,8 +56,12 @@
       margin-top: -.75em;
 
       color: white;
-      font-size: 4em;
+      font-size: 3em;
       text-align: center;
+
+      @media (min-width: 40em) {
+        font-size: 4em;
+      }
       span {
         display: inline-block;
         padding: .75rem 2rem 1rem;
@@ -52,6 +70,8 @@
     &__excerpt {
       margin-right: auto;
       margin-left: auto;
+      padding-right: 1em;
+      padding-left: 1em;
     }
     &__cta {
       text-align: center;
