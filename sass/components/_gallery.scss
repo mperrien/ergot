@@ -1,0 +1,13 @@
+.wp-block-gallery {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 70vw;
+
+  .blocks-gallery-item {
+    max-height: 30em;
+    img {
+      @include rounded;
+      @include shadow;
+    }
+  }
+}

@@ -21,15 +21,18 @@
 // 5. Components
 @import
 'components/banner',
+'components/block-image',
 'components/button',
 'components/footer',
+'components/gallery',
 'components/main-navigation';
 
 
 // 6. Page-specific styles
 @import
 'pages/accompaniment',
-'pages/front-page';
+'pages/front-page',
+'pages/default-page';
 
 // 7. Themes
 // @import

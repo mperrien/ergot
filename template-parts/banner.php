@@ -19,7 +19,13 @@
       the_title( '<h1 class="page-title">', '</h1>' );
     ?>
     <div class="page-banner__text copy">
-      <?php the_content(); ?>
+    <?php
+      if (is_page_template('template-accompaniment.php') || is_page_template('template-front.php')) {
+        the_content();
+      } else if (get_field('introduction')) {
+        the_field('introduction');
+      }
+    ?>
     </div>
     <?php
       $button = get_field('main-button');

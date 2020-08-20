@@ -60,7 +60,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat:400,400i,600,600i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat:400,400i,500,500i,600,600i&display=swap");
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -981,6 +981,10 @@ ul {
   max-width: 40em;
 }
 
+.mg-t-4 {
+  margin-top: 4em;
+}
+
 .post,
 .page {
   margin-bottom: 0;
@@ -1134,6 +1138,35 @@ ul {
      object-fit: cover;
 }
 
+.wp-block-image {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 30em;
+  max-width: 70vw;
+  overflow: hidden;
+}
+
+.wp-block-image img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .button {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
@@ -1174,6 +1207,10 @@ ul {
 
 .button--reverse-purple {
   background-color: #630069;
+}
+
+.button--reverse-orange {
+  background-color: #d9660d;
 }
 
 .site-footer {
@@ -1256,6 +1293,22 @@ ul {
 .site-footer__logo {
   margin-bottom: 2em;
   width: 6em;
+}
+
+.wp-block-gallery {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 70vw;
+}
+
+.wp-block-gallery .blocks-gallery-item {
+  max-height: 30em;
+}
+
+.wp-block-gallery .blocks-gallery-item img {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
 }
 
 .main-navigation {
@@ -1781,5 +1834,27 @@ ul {
 
 .page-template-template-front .artesania__cta {
   text-align: center;
+}
+
+.page-template-default .entry-content {
+  padding: 0 1em;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.page-template-default .entry-content h2 {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.page-template-default .entry-content p {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 40em;
+}
+
+.page-template-default .entry-content strong {
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */

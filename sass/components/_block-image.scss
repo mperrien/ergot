@@ -1,0 +1,20 @@
+.wp-block-image {
+  @include rounded;
+  @include shadow;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-height: 30em;
+  max-width: 70vw;
+  overflow: hidden;
+
+  img {
+
+    flex: 1;
+    height: 100%;
+    object-fit: cover;
+  }
+}
