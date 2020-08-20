@@ -3,25 +3,84 @@
   top: 1em;
   left: 2em;
 
-  width: auto;
+  width: calc(100% - 4em);
   .menu-toggle {
+    @include rounded;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    padding: .4em .5em .5em;
+
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 50%,
+      white 50%,
+      white 100%
+    );
+    background-position: 0 0;
+    background-size: 200% 100%;
+    border: 2px solid white;
+    cursor: pointer;
+
+    color: white;
+    text-transform: uppercase;
+
+    transition: background-position .2s ease-in-out;
+    
+    &[aria-expanded="true"] {
+      border-color: $purple-500;
+
+      color: $purple-500;
+    }
+    
     @media (min-width: 40em) {
       display: none;
     }
   }
   .menu {
+    @include shadow;
+
+    position: absolute;
+    top: -1em;
+    left: -2em;
+
     display: none;
+    padding: 2em 2em 1em;
+    width: 100vw;
+
+    background-color: white;
     @media (min-width: 40em) {
+      position: relative;
+      top: 0;
+      left: 0;
+
       display: flex;
+      padding: 0;
+      width: auto;
+
+      background-color: transparent;
+      box-shadow: none;
+    }
+    li {
+      margin-bottom: 1em;
     }
     li:not(last-child) {
       margin-right: 2em;
     }
     a {
-      color: white;
+      display: inline-block;
+
+      color: $purple-500;
       font-weight: 600;
       text-decoration: none;
       text-transform: uppercase;
+      @media (min-width: 40em) {
+        color: white;
+      }
     }
   }
 }

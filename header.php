@@ -27,7 +27,18 @@
 
 	<header id="masthead" class="site-header">
 		<nav id="site-navigation" class="main-navigation">
-      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ergot' ); ?></button>
+      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+        <?php
+          $page = get_page_by_path( 'es' );
+          $id = $page->ID;
+          $ancestors = get_post_ancestors($post->ID);
+          if (in_array($id, $ancestors) || is_page($id)) {
+            the_field('menu-es', 'option');
+          } else {
+            the_field('menu-fr', 'option');
+          }
+        ?> 
+      </button>
       <?php
         $page = get_page_by_path( 'es' );
         $id = $page->ID;

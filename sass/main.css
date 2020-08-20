@@ -1047,9 +1047,15 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 4em 2em 2em;
+  padding: 1em 2em 2em;
   background-color: #630069;
   color: white;
+}
+
+@media (min-width: 40em) {
+  .page-banner__content {
+    padding-top: 4em;
+  }
 }
 
 .page-banner__cta {
@@ -1205,7 +1211,30 @@ body {
   position: absolute;
   top: 1em;
   left: 2em;
-  width: auto;
+  width: calc(100% - 4em);
+}
+
+.main-navigation .menu-toggle {
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: .4em .5em .5em;
+  background: repeating-linear-gradient(90deg, transparent, transparent 50%, white 50%, white 100%);
+  background-position: 0 0;
+  background-size: 200% 100%;
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+  text-transform: uppercase;
+  -webkit-transition: background-position .2s ease-in-out;
+  transition: background-position .2s ease-in-out;
+}
+
+.main-navigation .menu-toggle[aria-expanded="true"] {
+  border-color: #630069;
+  color: #630069;
 }
 
 @media (min-width: 40em) {
@@ -1215,15 +1244,35 @@ body {
 }
 
 .main-navigation .menu {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  position: absolute;
+  top: -1em;
+  left: -2em;
   display: none;
+  padding: 2em 2em 1em;
+  width: 100vw;
+  background-color: white;
 }
 
 @media (min-width: 40em) {
   .main-navigation .menu {
+    position: relative;
+    top: 0;
+    left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
+    width: auto;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
+}
+
+.main-navigation .menu li {
+  margin-bottom: 1em;
 }
 
 .main-navigation .menu li:not(last-child) {
@@ -1231,10 +1280,17 @@ body {
 }
 
 .main-navigation .menu a {
-  color: white;
+  display: inline-block;
+  color: #630069;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+@media (min-width: 40em) {
+  .main-navigation .menu a {
+    color: white;
+  }
 }
 
 @media (min-width: 40em) {
