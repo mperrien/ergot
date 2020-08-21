@@ -1860,7 +1860,7 @@ a, a:hover, a:active, a:visited {
 .page-template-default .entry-content ul {
   margin-right: auto;
   margin-left: auto;
-  max-width: 40em;
+  max-width: 50em;
 }
 
 .page-template-default .entry-content strong {
