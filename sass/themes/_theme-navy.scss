@@ -1,0 +1,17 @@
+.page-theme-navy {
+  .page-banner {
+    &__content {
+      background-color: $blue-900;
+    }
+  }
+  .entry-content {
+    a:not(.button) {
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $blue-900;
+      }
+    }
+  }
+}

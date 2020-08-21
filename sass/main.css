@@ -977,6 +977,10 @@ ul {
   margin-left: 0;
 }
 
+a, a:hover, a:active, a:visited {
+  color: #630069;
+}
+
 .copy {
   max-width: 40em;
 }
@@ -1211,6 +1215,10 @@ ul {
 
 .button--reverse-orange {
   background-color: #d9660d;
+}
+
+.button--reverse-blue {
+  background-color: #053169;
 }
 
 .site-footer {
@@ -1848,7 +1856,8 @@ ul {
   text-align: center;
 }
 
-.page-template-default .entry-content p {
+.page-template-default .entry-content p,
+.page-template-default .entry-content ul {
   margin-right: auto;
   margin-left: auto;
   max-width: 40em;
@@ -1856,5 +1865,21 @@ ul {
 
 .page-template-default .entry-content strong {
   font-weight: 500;
+}
+
+.page-theme-navy .page-banner__content {
+  background-color: #053169;
+}
+
+.page-theme-navy .entry-content a:not(.button), .page-theme-navy .entry-content a:not(.button):hover, .page-theme-navy .entry-content a:not(.button):active, .page-theme-navy .entry-content a:not(.button):visited {
+  color: #053169;
+}
+
+.page-theme-orange .page-banner__content {
+  background-color: #d9660d;
+}
+
+.page-theme-orange .entry-content a:not(.button), .page-theme-orange .entry-content a:not(.button):hover, .page-theme-orange .entry-content a:not(.button):active, .page-theme-orange .entry-content a:not(.button):visited {
+  color: #d9660d;
 }
 /*# sourceMappingURL=main.css.map */

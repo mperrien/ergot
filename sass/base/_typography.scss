@@ -18,6 +18,15 @@ ul {
   margin-left: 0;
 }
 
+a {
+  &,
+  &:hover,
+  &:active,
+  &:visited {
+    color: $purple-500;
+  }
+}
+
 .copy {
   max-width: 40em;
 }

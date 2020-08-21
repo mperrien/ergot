@@ -1,0 +1,17 @@
+.page-theme-orange {
+  .page-banner {
+    &__content {
+      background-color: $orange-500;
+    }
+  }
+  .entry-content {
+    a:not(.button) {
+      &,
+      &:hover,
+      &:active,
+      &:visited {
+        color: $orange-500;
+      }
+    }
+  }
+}
