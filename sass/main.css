@@ -60,7 +60,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat:400,400i,500,500i,600,600i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Montserrat:400,400i,500,500i,600,600i,800&display=swap");
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -999,6 +999,97 @@ a, a:hover, a:active, a:visited {
   margin-left: auto;
   max-width: 80em;
   width: 100%;
+}
+
+.artesania-list {
+  max-width: 60em !important;
+  margin: 2em 0;
+  padding: 0;
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.artesania-list__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.artesania-list__item::after {
+  counter-increment: item;
+  content: counter(item) " ";
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 7rem);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  color: #630069;
+  font-size: 4em;
+  font-weight: 800;
+  text-align: right;
+}
+
+@media (min-width: 40em) {
+  .artesania-list__item::after {
+    right: calc(100% - 14rem);
+    font-size: 8em;
+  }
+}
+
+.artesania-list__image {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  height: 6em;
+  width: 6em;
+  margin-right: 2em;
+  overflow: hidden;
+  background-color: #630069;
+}
+
+@media (min-width: 40em) {
+  .artesania-list__image {
+    height: 12em;
+    width: 12em;
+    margin-right: 4em;
+  }
+}
+
+.artesania-list__image img {
+  display: block;
+  height: 12em;
+  width: 12em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.artesania-list__text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: calc(100% - 8em);
+}
+
+@media (min-width: 40em) {
+  .artesania-list__text {
+    width: calc(100% - 16em);
+  }
+}
+
+.artesania-list__text p {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  max-width: none !important;
 }
 
 .page-banner {
@@ -1941,6 +2032,7 @@ input[type="submit"].button--reverse-blue {
 .page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content h6,
 .page-template-default .entry-content p,
 .page-template-default .entry-content ul,
+.page-template-default .entry-content ol,
 .page-template-default .entry-content .wp-block-columns {
   margin-right: auto;
   margin-left: auto;

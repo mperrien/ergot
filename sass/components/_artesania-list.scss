@@ -1,0 +1,81 @@
+.artesania-list {
+  max-width: 60em !important;
+  margin: 2em 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  counter-reset: item;
+  &__item {
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+
+    &::after {
+      counter-increment: item;
+      content: counter(item) " ";
+
+      position: absolute;
+      top: 50%;
+      right: calc(100% - 7rem);
+      transform: translateY(-50%);
+
+      display: block;
+
+
+      color: $purple-500;
+      font-size: 4em;
+      font-weight: 800;
+      text-align: right;
+
+      @media (min-width: 40em) {
+        right: calc(100% - 14rem);
+
+        font-size: 8em;
+      }
+    }
+  }
+  &__image {
+    @include rounded;
+    @include shadow;
+
+    display: block;
+    flex: 0 1 auto;
+    // flex-basis: auto;
+    height: 6em;
+    width: 6em;
+    margin-right: 2em;
+    overflow: hidden;
+
+    background-color: $purple-500;
+
+    @media (min-width: 40em) {
+      height: 12em;
+      width: 12em;
+      margin-right: 4em;
+    }
+
+    img {
+      display: block;
+      height: 12em;
+      width: 12em;
+      object-fit: cover;
+    }
+  }
+  &__text {
+    flex: 0 1 auto;
+    width: calc(100% - 8em);
+
+    @media (min-width: 40em) {
+      width: calc(100% - 16em);
+    }
+
+    p {
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+      max-width: none !important;
+    }
+  }
+}

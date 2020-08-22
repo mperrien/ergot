@@ -181,7 +181,27 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// ACF
 // Add an option page.
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();	
+}
+
+// Create ACF Gutenberg blocks
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+  // Check function exists.
+  if( function_exists('acf_register_block_type') ) {
+    // register special list block for Artesania steps
+    acf_register_block_type(array(
+      'name'              => 'artesania-list',
+      'title'             => __('Arte/san(í)a List'),
+      'description'       => __('Custom list for Arte/san(í)a page.'),
+      'render_template'   => 'template-parts/blocks/artesania-list/artesania-list.php',
+      'mode'              => 'edit',
+      'category'          => 'formatting',
+      'icon'              => 'editor-ol',
+      'keywords'          => array( 'testimonial', 'quote' ),
+    ));
+  }
 }
