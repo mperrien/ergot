@@ -1122,24 +1122,17 @@ a, a:hover, a:active, a:visited {
 }
 
 .page-banner__image {
-  max-height: 40em;
+  height: 33em;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (min-width: 60em) {
   .page-banner__image {
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
-    max-height: none;
+    height: auto;
   }
-}
-
-.page-banner__image img {
-  display: block;
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .wp-block-image {
@@ -1945,12 +1938,26 @@ input[type="submit"].button--reverse-blue {
   text-align: center;
 }
 
+.page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content h6,
 .page-template-default .entry-content p,
 .page-template-default .entry-content ul,
 .page-template-default .entry-content .wp-block-columns {
   margin-right: auto;
   margin-left: auto;
-  max-width: 50em;
+  max-width: 50rem;
+}
+
+.page-template-default .entry-content blockquote {
+  margin: 4em 0 4em -1em;
+  padding: 4em 2em;
+  width: 100vw;
+  background-color: #630069;
+}
+
+.page-template-default .entry-content blockquote p {
+  max-width: 40em;
+  font-size: 2em;
+  color: white;
 }
 
 .page-template-default .entry-content .wpcf7-form {

@@ -10,12 +10,29 @@
       text-align: center;
     }
 
+    h2, h3, h4, h5, h6,
     p,
     ul,
     .wp-block-columns {
       margin-right: auto;
       margin-left: auto;
-      max-width: 50em;
+      max-width: 50rem;
+    }
+
+    blockquote {
+      margin: 4em 0 4em -1em;
+      padding: 4em 2em;
+      width: 100vw;
+
+      background-color: $purple-500;
+
+      p {
+        max-width: 40em;
+
+        font-size: 2em;
+        color: white;
+
+      }
     }
 
     .wpcf7-form {

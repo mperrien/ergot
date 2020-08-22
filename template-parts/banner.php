@@ -58,6 +58,31 @@
     ?>
   </div>
   <div class="page-banner__image">
-    <?php the_post_thumbnail(); ?>
+  <?php
+    // $image = get_the_post_thumbnail();
+    $image_id = get_post_thumbnail_id();
+    $image_large = wp_get_attachment_image_src( $image_id, "large" );
+    $image_huge = wp_get_attachment_image_src( $image_id, "1536x1536" );
+  ?>
+  <style>
+    .page-banner__image {
+      background-image: url('<?php echo $image_large[0]; ?>');
+    }
+    @media (min-width: 40em) {
+      .page-banner__image {
+        background-image: url('<?php echo $image_huge[0]; ?>');
+      }
+    }
+    @media (min-width: 60em) {
+      .page-banner__image {
+        background-image: url('<?php echo $image_large[0]; ?>');
+      }
+    }
+    @media (min-width: 80em) {
+      .page-banner__image {
+        background-image: url('<?php echo $image_huge[0]; ?>');
+      }
+    }
+  </style>
   </div>
 </div>
