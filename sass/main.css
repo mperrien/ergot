@@ -1241,7 +1241,6 @@ a, a:hover, a:active, a:visited {
           justify-content: center;
   margin-right: auto;
   margin-left: auto;
-  max-height: 30em;
   max-width: 70vw;
   overflow: hidden;
 }
