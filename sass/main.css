@@ -1003,7 +1003,7 @@ a, a:hover, a:active, a:visited {
 
 .artesania-list {
   max-width: 60em !important;
-  margin: 2em 0;
+  margin: 6em 0;
   padding: 0;
   list-style-type: none;
   counter-reset: item;
