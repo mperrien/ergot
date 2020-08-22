@@ -1963,6 +1963,12 @@ input[type="submit"].button--reverse-blue {
   }
 }
 
+@media (min-width: 75em) {
+  .page-template-template-front .artesania__image::before {
+    width: calc(50% + 11em);
+  }
+}
+
 .page-template-template-front .artesania__title {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
   -webkit-transform: translateY(7%);

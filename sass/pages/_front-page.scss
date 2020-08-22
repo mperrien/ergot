@@ -222,6 +222,9 @@
 
           width: 50em;
         }
+        @media (min-width: 75em) {
+          width: calc(50% + 11em);
+        }
       }
     }
     &__title {
