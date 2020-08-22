@@ -1,61 +1,66 @@
-.button {
-  @include shadow;
-
-  display: inline-block;
-  padding: 1em 2em;
-
-  background-color: white;
-  border-radius: 2em;
-
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: uppercase;
-
-  &:hover {
-    transform: translateY(1px);
-  }
-
-  &:active {
-    transform: translateY(2px);
-  }
-
-  &--purple {
-    &,
-    &:visited,
+a,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  &.button {
+    @include shadow;
+  
+    display: inline-block;
+    padding: 1em 2em;
+  
+    background-color: white;
+    border-radius: 2em;
+  
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+  
     &:hover {
-      color: $purple-500;
+      transform: translateY(1px);
     }
-  }
-
-  &--orange {
-    &,
-    &:visited,
-    &:hover {
-      color: $orange-500;
+  
+    &:active {
+      transform: translateY(2px);
     }
-  }
-
-  &--blue {
-    &,
-    &:visited,
-    &:hover {
-      color: $blue-900;
+  
+    &--purple {
+      &,
+      &:visited,
+      &:hover {
+        color: $purple-500;
+      }
     }
-  }
-  &--reverse {
-    &,
-    &:visited,
-    &:hover {
-      color: white;
+  
+    &--orange {
+      &,
+      &:visited,
+      &:hover {
+        color: $orange-500;
+      }
     }
-    &-purple {
-      background-color: $purple-500;
+  
+    &--blue {
+      &,
+      &:visited,
+      &:hover {
+        color: $blue-900;
+      }
     }
-    &-orange {
-      background-color: $orange-500;
-    }
-    &-blue {
-      background-color: $blue-900;
+    &--reverse {
+      &,
+      &:visited,
+      &:hover {
+        color: white;
+      }
+      &-purple {
+        background-color: $purple-500;
+      }
+      &-orange {
+        background-color: $orange-500;
+      }
+      &-blue {
+        background-color: $blue-900;
+      }
     }
   }
 }

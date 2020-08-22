@@ -1,0 +1,50 @@
+.wpcf7 {
+  input {
+    &[type="text"],
+    &[type="email"],
+    &[type="url"],
+    &[type="password"],
+    &[type="search"],
+    &[type="number"],
+    &[type="tel"],
+    &[type="range"],
+    &[type="date"],
+    &[type="month"],
+    &[type="week"],
+    &[type="time"],
+    &[type="datetime"],
+    &[type="datetime-local"],
+    &[type="color"],
+    textarea {
+      width: 100%;
+
+      color: $text-base;
+      font-family: inherit;
+    }
+  }
+  .wpcf7-text,
+  .wpcf7-textarea {
+    padding: .4em .75em .5em;
+
+    background-color: lighten($text-base, 77);
+    border: 2px solid lighten($text-base, 77);
+    
+    &:focus {
+      background-color: transparent;
+      border-color: $purple-500;
+      outline: none;
+    }
+
+    &.wpcf7-not-valid {
+      border-color: $red-500;
+    }
+  }
+  .wpcf7-not-valid-tip {
+    color: $red-500;
+  }
+
+  form.invalid .wpcf7-response-output,
+  form.unaccepted .wpcf7-response-output {
+    border-color: $red-500;
+  }
+}

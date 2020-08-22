@@ -11,10 +11,17 @@
     }
 
     p,
-    ul {
+    ul,
+    .wp-block-columns {
       margin-right: auto;
       margin-left: auto;
       max-width: 50em;
+    }
+
+    .wpcf7-form {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 30em;
     }
 
     strong {

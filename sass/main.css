@@ -1171,7 +1171,10 @@ a, a:hover, a:active, a:visited {
      object-fit: cover;
 }
 
-.button {
+a.button,
+input[type="button"].button,
+input[type="reset"].button,
+input[type="submit"].button {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
   display: inline-block;
@@ -1183,41 +1186,92 @@ a, a:hover, a:active, a:visited {
   text-transform: uppercase;
 }
 
-.button:hover {
+a.button:hover,
+input[type="button"].button:hover,
+input[type="reset"].button:hover,
+input[type="submit"].button:hover {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
 }
 
-.button:active {
+a.button:active,
+input[type="button"].button:active,
+input[type="reset"].button:active,
+input[type="submit"].button:active {
   -webkit-transform: translateY(2px);
           transform: translateY(2px);
 }
 
-.button--purple, .button--purple:visited, .button--purple:hover {
+a.button--purple, a.button--purple:visited, a.button--purple:hover,
+input[type="button"].button--purple,
+input[type="button"].button--purple:visited,
+input[type="button"].button--purple:hover,
+input[type="reset"].button--purple,
+input[type="reset"].button--purple:visited,
+input[type="reset"].button--purple:hover,
+input[type="submit"].button--purple,
+input[type="submit"].button--purple:visited,
+input[type="submit"].button--purple:hover {
   color: #630069;
 }
 
-.button--orange, .button--orange:visited, .button--orange:hover {
+a.button--orange, a.button--orange:visited, a.button--orange:hover,
+input[type="button"].button--orange,
+input[type="button"].button--orange:visited,
+input[type="button"].button--orange:hover,
+input[type="reset"].button--orange,
+input[type="reset"].button--orange:visited,
+input[type="reset"].button--orange:hover,
+input[type="submit"].button--orange,
+input[type="submit"].button--orange:visited,
+input[type="submit"].button--orange:hover {
   color: #d9660d;
 }
 
-.button--blue, .button--blue:visited, .button--blue:hover {
+a.button--blue, a.button--blue:visited, a.button--blue:hover,
+input[type="button"].button--blue,
+input[type="button"].button--blue:visited,
+input[type="button"].button--blue:hover,
+input[type="reset"].button--blue,
+input[type="reset"].button--blue:visited,
+input[type="reset"].button--blue:hover,
+input[type="submit"].button--blue,
+input[type="submit"].button--blue:visited,
+input[type="submit"].button--blue:hover {
   color: #053169;
 }
 
-.button--reverse, .button--reverse:visited, .button--reverse:hover {
+a.button--reverse, a.button--reverse:visited, a.button--reverse:hover,
+input[type="button"].button--reverse,
+input[type="button"].button--reverse:visited,
+input[type="button"].button--reverse:hover,
+input[type="reset"].button--reverse,
+input[type="reset"].button--reverse:visited,
+input[type="reset"].button--reverse:hover,
+input[type="submit"].button--reverse,
+input[type="submit"].button--reverse:visited,
+input[type="submit"].button--reverse:hover {
   color: white;
 }
 
-.button--reverse-purple {
+a.button--reverse-purple,
+input[type="button"].button--reverse-purple,
+input[type="reset"].button--reverse-purple,
+input[type="submit"].button--reverse-purple {
   background-color: #630069;
 }
 
-.button--reverse-orange {
+a.button--reverse-orange,
+input[type="button"].button--reverse-orange,
+input[type="reset"].button--reverse-orange,
+input[type="submit"].button--reverse-orange {
   background-color: #d9660d;
 }
 
-.button--reverse-blue {
+a.button--reverse-blue,
+input[type="button"].button--reverse-blue,
+input[type="reset"].button--reverse-blue,
+input[type="submit"].button--reverse-blue {
   background-color: #053169;
 }
 
@@ -1301,6 +1355,41 @@ a, a:hover, a:active, a:visited {
 .site-footer__logo {
   margin-bottom: 2em;
   width: 6em;
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 input[type="url"], .wpcf7 input[type="password"], .wpcf7 input[type="search"], .wpcf7 input[type="number"], .wpcf7 input[type="tel"], .wpcf7 input[type="range"], .wpcf7 input[type="date"], .wpcf7 input[type="month"], .wpcf7 input[type="week"], .wpcf7 input[type="time"], .wpcf7 input[type="datetime"], .wpcf7 input[type="datetime-local"], .wpcf7 input[type="color"],
+.wpcf7 input textarea {
+  width: 100%;
+  color: #343434;
+  font-family: inherit;
+}
+
+.wpcf7 .wpcf7-text,
+.wpcf7 .wpcf7-textarea {
+  padding: .4em .75em .5em;
+  background-color: #f8f8f8;
+  border: 2px solid #f8f8f8;
+}
+
+.wpcf7 .wpcf7-text:focus,
+.wpcf7 .wpcf7-textarea:focus {
+  background-color: transparent;
+  border-color: #630069;
+  outline: none;
+}
+
+.wpcf7 .wpcf7-text.wpcf7-not-valid,
+.wpcf7 .wpcf7-textarea.wpcf7-not-valid {
+  border-color: #ce2918;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+  color: #ce2918;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+  border-color: #ce2918;
 }
 
 .wp-block-gallery {
@@ -1857,10 +1946,17 @@ a, a:hover, a:active, a:visited {
 }
 
 .page-template-default .entry-content p,
-.page-template-default .entry-content ul {
+.page-template-default .entry-content ul,
+.page-template-default .entry-content .wp-block-columns {
   margin-right: auto;
   margin-left: auto;
   max-width: 50em;
+}
+
+.page-template-default .entry-content .wpcf7-form {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 30em;
 }
 
 .page-template-default .entry-content strong {
