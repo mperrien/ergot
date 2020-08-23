@@ -1,0 +1,43 @@
+.page-template-template-team {
+  .team {
+    padding-right: 1em;
+    padding-left: 1em;
+    .ot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 4em 0;
+
+      &__name {
+        font-size: 2em;
+      }
+
+      &__image {
+        @include rounded;
+        @include shadow;
+
+        overflow: hidden;
+
+        img {
+          display: block;
+        }
+      }
+
+      @media (min-width: 50em) {
+        flex-direction: row;
+        .ot__presentation {
+          padding-right: 2em;
+        }
+
+        &:nth-child(2n+1) {
+          flex-direction: row-reverse;
+  
+          .ot__presentation {
+            padding-right: 0;
+            padding-left: 2em;
+          }
+        }
+      }
+    }
+  }
+}

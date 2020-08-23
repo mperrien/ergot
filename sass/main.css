@@ -1670,6 +1670,51 @@ input[type="submit"].button--reverse-blue {
   color: white;
 }
 
+.page-template-default .entry-content {
+  padding: 0 1em;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.page-template-default .entry-content h2 {
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content h6,
+.page-template-default .entry-content p,
+.page-template-default .entry-content ul,
+.page-template-default .entry-content ol,
+.page-template-default .entry-content .wp-block-columns {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 50rem;
+}
+
+.page-template-default .entry-content blockquote {
+  margin: 4em 0 4em -1em;
+  padding: 4em 2em;
+  width: 100vw;
+  background-color: #630069;
+}
+
+.page-template-default .entry-content blockquote p {
+  max-width: 40em;
+  font-size: 2em;
+  color: white;
+}
+
+.page-template-default .entry-content .wpcf7-form {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 30em;
+}
+
+.page-template-default .entry-content strong {
+  font-weight: 500;
+}
+
 @media (min-width: 40em) {
   .page-template-template-front .accompaniment {
     padding: 0 1em;
@@ -2022,49 +2067,60 @@ input[type="submit"].button--reverse-blue {
   text-align: center;
 }
 
-.page-template-default .entry-content {
-  padding: 0 1em;
-  margin-top: 4em;
-  margin-bottom: 4em;
+.page-template-template-team .team {
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
-.page-template-default .entry-content h2 {
+.page-template-template-team .team .ot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4em 0;
+}
+
+.page-template-template-team .team .ot__name {
   font-size: 2em;
-  font-weight: 500;
-  text-align: center;
 }
 
-.page-template-default .entry-content h2, .page-template-default .entry-content h3, .page-template-default .entry-content h4, .page-template-default .entry-content h5, .page-template-default .entry-content h6,
-.page-template-default .entry-content p,
-.page-template-default .entry-content ul,
-.page-template-default .entry-content ol,
-.page-template-default .entry-content .wp-block-columns {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 50rem;
+.page-template-template-team .team .ot__image {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
+  overflow: hidden;
 }
 
-.page-template-default .entry-content blockquote {
-  margin: 4em 0 4em -1em;
-  padding: 4em 2em;
-  width: 100vw;
-  background-color: #630069;
+.page-template-template-team .team .ot__image img {
+  display: block;
 }
 
-.page-template-default .entry-content blockquote p {
-  max-width: 40em;
-  font-size: 2em;
-  color: white;
-}
-
-.page-template-default .entry-content .wpcf7-form {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 30em;
-}
-
-.page-template-default .entry-content strong {
-  font-weight: 500;
+@media (min-width: 50em) {
+  .page-template-template-team .team .ot {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .page-template-template-team .team .ot .ot__presentation {
+    padding-right: 2em;
+  }
+  .page-template-template-team .team .ot:nth-child(2n+1) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .page-template-template-team .team .ot:nth-child(2n+1) .ot__presentation {
+    padding-right: 0;
+    padding-left: 2em;
+  }
 }
 
 .page-theme-navy .page-banner__content {
