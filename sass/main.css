@@ -978,7 +978,7 @@ ul {
 }
 
 a, a:hover, a:active, a:visited {
-  color: #630069;
+  color: #4e3373;
 }
 
 .copy {
@@ -1029,7 +1029,7 @@ a, a:hover, a:active, a:visited {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   display: block;
-  color: #630069;
+  color: #4e3373;
   font-size: 4em;
   font-weight: 800;
   text-align: right;
@@ -1054,7 +1054,7 @@ a, a:hover, a:active, a:visited {
   width: 6em;
   margin-right: 2em;
   overflow: hidden;
-  background-color: #630069;
+  background-color: #4e3373;
 }
 
 @media (min-width: 40em) {
@@ -1160,7 +1160,7 @@ a, a:hover, a:active, a:visited {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1em 2em 2em;
-  background-color: #630069;
+  background-color: #4e3373;
   color: white;
 }
 
@@ -1295,7 +1295,7 @@ input[type="reset"].button--purple:hover,
 input[type="submit"].button--purple,
 input[type="submit"].button--purple:visited,
 input[type="submit"].button--purple:hover {
-  color: #630069;
+  color: #4e3373;
 }
 
 a.button--orange, a.button--orange:visited, a.button--orange:hover,
@@ -1341,7 +1341,7 @@ a.button--reverse-purple,
 input[type="button"].button--reverse-purple,
 input[type="reset"].button--reverse-purple,
 input[type="submit"].button--reverse-purple {
-  background-color: #630069;
+  background-color: #4e3373;
 }
 
 a.button--reverse-orange,
@@ -1457,7 +1457,7 @@ input[type="submit"].button--reverse-blue {
 .wpcf7 .wpcf7-text:focus,
 .wpcf7 .wpcf7-textarea:focus {
   background-color: transparent;
-  border-color: #630069;
+  border-color: #4e3373;
   outline: none;
 }
 
@@ -1517,8 +1517,8 @@ input[type="submit"].button--reverse-blue {
 }
 
 .main-navigation .menu-toggle[aria-expanded="true"] {
-  border-color: #630069;
-  color: #630069;
+  border-color: #4e3373;
+  color: #4e3373;
 }
 
 @media (min-width: 40em) {
@@ -1565,7 +1565,7 @@ input[type="submit"].button--reverse-blue {
 
 .main-navigation .menu a {
   display: inline-block;
-  color: #630069;
+  color: #4e3373;
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
@@ -1604,7 +1604,7 @@ input[type="submit"].button--reverse-blue {
 
 .page-template-template-accompaniment .audience:nth-child(2n+2) .audience__title span,
 .page-template-template-accompaniment .audience:nth-child(2n+2) .audience__cta .button {
-  background-color: #630069;
+  background-color: #4e3373;
 }
 
 .page-template-template-accompaniment .audience:nth-child(2n+3) .audience__title span,
@@ -1696,7 +1696,7 @@ input[type="submit"].button--reverse-blue {
   margin: 4em 0 4em -1em;
   padding: 4em 2em;
   width: 100vw;
-  background-color: #630069;
+  background-color: #4e3373;
 }
 
 .page-template-default .entry-content blockquote p {
@@ -1828,7 +1828,7 @@ input[type="submit"].button--reverse-blue {
 
 .page-template-template-front .accompaniment .audience--adults .audience__content {
   padding: 2em;
-  background-color: #630069;
+  background-color: #4e3373;
 }
 
 @media (min-width: 40em) {
@@ -1983,7 +1983,7 @@ input[type="submit"].button--reverse-blue {
   display: block;
   height: 5em;
   width: 27em;
-  background-color: #630069;
+  background-color: #4e3373;
 }
 
 @media (min-width: 40em) {
