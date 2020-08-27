@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!favicon.svg
+!mask-icon.svg
+!favicon.icon
+# etc...
+
+# ...even if they are in subdirectories
+!*/
+
+# Track the theme
+!wp-content/themes/ergot/*/*/*/*
