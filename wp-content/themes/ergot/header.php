@@ -27,6 +27,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+  <meta name="theme-color" content="#4e3373">
+  <link rel="icon" href="favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="mask-icon" href="mask-icon.svg" color="#4e3373">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+
 	<?php wp_head(); ?>
 </head>
 <?php $theme = 'page-' . get_field('page-color', get_the_ID()); ?>

@@ -5,7 +5,10 @@
 !.gitignore
 !favicon.svg
 !mask-icon.svg
-!favicon.icon
+!favicon.ico
+!google-touch-icon.png
+!apple-touch-icon.png
+!manifest.json
 # etc...
 
 # ...even if they are in subdirectories
