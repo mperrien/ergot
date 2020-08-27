@@ -9,6 +9,7 @@
 !google-touch-icon.png
 !apple-touch-icon.png
 !manifest.json
+!.github/workflows/main.yml
 # etc...
 
 # ...even if they are in subdirectories
