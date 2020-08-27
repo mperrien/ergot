@@ -14,3 +14,4 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USER }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        knpwn-hosts: sftp.dc2.gpaas.net ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0f0qisqqCXevi5bKrhbkjwdQfjtRV9+RkftAh1kGyNOIU8vsKaU64/wtj6v1fV1DT4gsuuQ6gtR/dh7D40clGOatlWSah3AE+HCaG0sQpQr81K1Ro4MxdzmPKdDmNk3WBQkCN8JuiA4p8/TxD+uwqgsuVeYKf5DEuBFn9NTo5kYmwSYX8nMV6Dm3r3idjH6dCBew24gPvGtwoo/Eekt8w9YWmN+G7EKtaRAF2oAa2S8I5c6qMYFtdd9X07oI7JqZaJpFObmEoQEIS8jz25Fltbl5V6g5tsl/ZgPxJrofr95mWRUCAp3Aq35FOegDDg23fRx9yg1u+nw9/+KR14xW5
