@@ -28,11 +28,11 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
   <meta name="theme-color" content="#4e3373">
-  <link rel="icon" href="favicon.svg">
+  <link rel="icon" href="/favicon.svg">
   <link rel="alternate icon" href="/favicon.ico">
-  <link rel="mask-icon" href="mask-icon.svg" color="#4e3373">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="manifest" href="manifest.json">
+  <link rel="mask-icon" href="/mask-icon.svg" color="#4e3373">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
 
 	<?php wp_head(); ?>
 </head>
