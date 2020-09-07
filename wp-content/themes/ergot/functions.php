@@ -205,3 +205,23 @@ function my_acf_init_block_types() {
     ));
   }
 }
+
+/**
+ * Changes the locale output.
+ * 
+ * @param string $locale The current locale.
+ * 
+ * @return string The locale.
+ */
+function yst_wpseo_change_og_locale( $locale ) {
+  $page = get_page_by_path( 'es' );
+  $id = $page->ID;
+  $ancestors = get_post_ancestors($post->ID);
+  if (in_array($id, $ancestors) || is_page($id)) {
+    return 'es_ES';
+  } else {
+    return 'fr_FR';
+  }
+}
+
+add_filter( 'wpseo_locale', 'yst_wpseo_change_og_locale' );
