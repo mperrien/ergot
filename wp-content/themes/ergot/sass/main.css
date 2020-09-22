@@ -1230,23 +1230,15 @@ a, a:hover, a:active, a:visited {
   border-radius: 5px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
-  position: relative;
   margin-right: auto;
   margin-left: auto;
   max-width: 70vw;
-  overflow: hidden;
 }
 
 .wp-block-image img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: block;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  height: auto;
+  width: 100%;
 }
 
 a.button,
@@ -1473,11 +1465,25 @@ input[type="submit"].button--reverse-blue {
 .wp-block-gallery {
   margin-right: auto;
   margin-left: auto;
-  max-width: 70vw;
+}
+
+@media (min-width: 40em) {
+  .wp-block-gallery {
+    max-width: 70vw;
+  }
 }
 
 .wp-block-gallery .blocks-gallery-item {
+  margin-right: 0;
   max-height: 30em;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .wp-block-gallery .blocks-gallery-item {
+    margin-right: 16px;
+    width: calc((100% - 16px)/2);
+  }
 }
 
 .wp-block-gallery .blocks-gallery-item img {
