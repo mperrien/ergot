@@ -1254,7 +1254,7 @@ a, a:hover, a:active, a:visited {
      object-fit: cover;
 }
 
-.wp-block-image img.no-crop {
+.wp-block-image.no-crop img {
   height: auto;
   -o-object-fit: none;
      object-fit: none;
