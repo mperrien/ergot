@@ -1740,7 +1740,19 @@ input[type="submit"].button--reverse-blue {
 
 .page-template-template-front .accompaniment .audience__title {
   margin: 0 0 1rem;
-  font-size: 3.5em;
+  font-size: 2em;
+}
+
+@media (min-width: 40em) {
+  .page-template-template-front .accompaniment .audience__title {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 50em) {
+  .page-template-template-front .accompaniment .audience__title {
+    font-size: 3.5em;
+  }
 }
 
 .page-template-template-front .accompaniment .audience__text {

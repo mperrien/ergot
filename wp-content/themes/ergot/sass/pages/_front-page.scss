@@ -20,7 +20,13 @@
       &__title {
         margin: 0 0 1rem;
 
-        font-size: 3.5em;
+        font-size: 2em;
+        @media (min-width: 40em) {
+          font-size: 3em;
+        }
+        @media (min-width: 50em) {
+          font-size: 3.5em;
+        }
       }
       &__text {
         font-size: 1.25em;
