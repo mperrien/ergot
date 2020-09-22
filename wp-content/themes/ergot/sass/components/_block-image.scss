@@ -2,24 +2,22 @@
   @include rounded;
   @include shadow;
   
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+
   margin-right: auto;
   margin-left: auto;
   max-width: 70vw;
   overflow: hidden;
 
   img {
-    flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
     height: 100%;
     object-fit: cover;
-  }
 
-  &.no-crop {
-    img {
-      height: auto;
-      object-fit: none;
-    }
+    transform: translate(-50%, -50%);
   }
 }
