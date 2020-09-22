@@ -3,7 +3,6 @@
   @include shadow;
   
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-right: auto;
@@ -12,9 +11,12 @@
   overflow: hidden;
 
   img {
-
     flex: 1;
     height: 100%;
     object-fit: cover;
+    &.no-crop {
+      height: auto;
+      object-fit: none;
+    }
   }
 }
