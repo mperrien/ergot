@@ -1446,11 +1446,11 @@ input[type="submit"].button--reverse-blue {
   white-space: nowrap;
 }
 
-.wpcf7 input[type="checkbox"] + label::before {
+.wpcf7 input[type="checkbox"] + .wpcf7-list-item-label::before {
   border: 2px solid #343434;
 }
 
-.wpcf7 input[type="checkbox"]:checked + label::after {
+.wpcf7 input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
   content: '';
   position: absolute;
   top: 5px;
@@ -1461,11 +1461,11 @@ input[type="submit"].button--reverse-blue {
   background-color: #4e3373;
 }
 
-.wpcf7 input[type="checkbox"]:checked + label::before {
+.wpcf7 input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
   border-color: #4e3373;
 }
 
-.wpcf7 input[type="checkbox"]:focus + label::before {
+.wpcf7 input[type="checkbox"]:focus + .wpcf7-list-item-label::before {
   border-color: #4e3373;
 }
 
@@ -1488,6 +1488,10 @@ input[type="submit"].button--reverse-blue {
   border-color: #ce2918;
 }
 
+.wpcf7 .wpcf7-checkbox {
+  position: relative;
+}
+
 .wpcf7 .wpcf7-not-valid-tip {
   color: #ce2918;
 }
@@ -1498,7 +1502,7 @@ input[type="submit"].button--reverse-blue {
 }
 
 .wpcf7 span.wpcf7-list-item {
-  margin-right: 0;
+  margin-left: 0;
 }
 
 .wp-block-gallery {

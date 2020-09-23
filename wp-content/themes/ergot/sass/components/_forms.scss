@@ -33,11 +33,11 @@
       clip: rect(1px, 1px, 1px, 1px);
 
       white-space: nowrap;
-      + label::before {
+      + .wpcf7-list-item-label::before {
         border: 2px solid $text-base;
       }
       &:checked {
-        + label::after {
+        + .wpcf7-list-item-label::after {
           content: '';
 
           position: absolute;
@@ -50,12 +50,12 @@
 
           background-color: $purple-500;
         }
-        + label::before {
+        + .wpcf7-list-item-label::before {
           border-color: $purple-500;
         }
       }
       &:focus {
-        +label::before {
+        + .wpcf7-list-item-label::before {
           border-color: $purple-500;
         }
       }
@@ -78,6 +78,9 @@
       border-color: $red-500;
     }
   }
+  .wpcf7-checkbox {
+    position: relative;
+  }
   .wpcf7-not-valid-tip {
     color: $red-500;
   }
@@ -88,6 +91,6 @@
   }
 
   span.wpcf7-list-item {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
