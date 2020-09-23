@@ -1446,8 +1446,24 @@ input[type="submit"].button--reverse-blue {
   white-space: nowrap;
 }
 
-.wpcf7 input[type="checkbox"] + .wpcf7-list-item-label::before {
+.wpcf7 input[type="checkbox"] .wpcf7-list-item-label {
+  position: relative;
+  display: block;
+  padding-left: 27px;
+  font-weight: 400;
+}
+
+.wpcf7 input[type="checkbox"] .wpcf7-list-item-label::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
   border: 2px solid #343434;
+  cursor: pointer;
 }
 
 .wpcf7 input[type="checkbox"]:checked + .wpcf7-list-item-label::after {

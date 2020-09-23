@@ -33,8 +33,28 @@
       clip: rect(1px, 1px, 1px, 1px);
 
       white-space: nowrap;
-      + .wpcf7-list-item-label::before {
-        border: 2px solid $text-base;
+      .wpcf7-list-item-label {
+        position: relative;
+  
+        display: block;
+        padding-left: 27px;
+  
+        font-weight: 400;
+        &::before {
+          content: '';
+  
+          position: absolute;
+          top: 2px;
+          left: 0;
+  
+          display: block;
+          height: 17px;
+          width: 17px;
+  
+          background-color: transparent;
+          border: 2px solid $text-base;
+          cursor: pointer;
+        }
       }
       &:checked {
         + .wpcf7-list-item-label::after {
