@@ -1434,6 +1434,41 @@ input[type="submit"].button--reverse-blue {
   font-family: inherit;
 }
 
+.wpcf7 input[type="checkbox"] {
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.wpcf7 input[type="checkbox"] + label::before {
+  border: 2px solid #343434;
+}
+
+.wpcf7 input[type="checkbox"]:checked + label::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  display: block;
+  height: 11px;
+  width: 11px;
+  background-color: #4e3373;
+}
+
+.wpcf7 input[type="checkbox"]:checked + label::before {
+  border-color: #4e3373;
+}
+
+.wpcf7 input[type="checkbox"]:focus + label::before {
+  border-color: #4e3373;
+}
+
 .wpcf7 .wpcf7-text,
 .wpcf7 .wpcf7-textarea {
   padding: .4em .75em .5em;
@@ -1460,6 +1495,10 @@ input[type="submit"].button--reverse-blue {
 .wpcf7 form.invalid .wpcf7-response-output,
 .wpcf7 form.unaccepted .wpcf7-response-output {
   border-color: #ce2918;
+}
+
+.wpcf7 span.wpcf7-list-item {
+  margin-right: 0;
 }
 
 .wp-block-gallery {

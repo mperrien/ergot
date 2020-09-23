@@ -21,6 +21,45 @@
       color: $text-base;
       font-family: inherit;
     }
+    &[type="checkbox"] {
+      position: absolute;
+      top: auto;
+
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+
+      clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+      clip: rect(1px, 1px, 1px, 1px);
+
+      white-space: nowrap;
+      + label::before {
+        border: 2px solid $text-base;
+      }
+      &:checked {
+        + label::after {
+          content: '';
+
+          position: absolute;
+          top: 5px;
+          left: 3px;
+
+          display: block;
+          height: 11px;
+          width: 11px;
+
+          background-color: $purple-500;
+        }
+        + label::before {
+          border-color: $purple-500;
+        }
+      }
+      &:focus {
+        +label::before {
+          border-color: $purple-500;
+        }
+      }
+    }
   }
   .wpcf7-text,
   .wpcf7-textarea {
@@ -46,5 +85,9 @@
   form.invalid .wpcf7-response-output,
   form.unaccepted .wpcf7-response-output {
     border-color: $red-500;
+  }
+
+  span.wpcf7-list-item {
+    margin-right: 0;
   }
 }
