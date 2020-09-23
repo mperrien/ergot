@@ -1446,14 +1446,14 @@ input[type="submit"].button--reverse-blue {
   white-space: nowrap;
 }
 
-.wpcf7 input[type="checkbox"] .wpcf7-list-item-label {
+.wpcf7 input[type="checkbox"] + .wpcf7-list-item-label {
   position: relative;
   display: block;
   padding-left: 27px;
   font-weight: 400;
 }
 
-.wpcf7 input[type="checkbox"] .wpcf7-list-item-label::before {
+.wpcf7 input[type="checkbox"] + .wpcf7-list-item-label::before {
   content: '';
   position: absolute;
   top: 2px;
