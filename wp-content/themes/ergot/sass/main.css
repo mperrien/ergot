@@ -2005,7 +2005,7 @@ input[type="submit"].button--reverse-blue {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.32);
   position: relative;
   margin-bottom: -2em;
-  width: 100vw;
+  width: 100%;
 }
 
 @media (min-width: 40em) {
@@ -2145,16 +2145,11 @@ input[type="submit"].button--reverse-blue {
 }
 
 .page-template-template-team .team .ot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  grid-gap: 2em;
   margin: 4em 0;
 }
 
@@ -2171,17 +2166,21 @@ input[type="submit"].button--reverse-blue {
 
 .page-template-template-team .team .ot__image img {
   display: block;
+  width: 100%;
 }
 
 @media (min-width: 50em) {
   .page-template-template-team .team .ot {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-grid-columns: (calc(50% - 1em))[2];
+        grid-template-columns: repeat(2, calc(50% - 1em));
   }
-  .page-template-template-team .team .ot .ot__presentation {
-    padding-right: 2em;
+  .page-template-template-team .team .ot .ot__image {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .page-template-template-team .team .ot .ot__image image {
+    width: auto;
+    max-width: 100%;
   }
   .page-template-template-team .team .ot:nth-child(2n+1) {
     -webkit-box-orient: horizontal;
@@ -2189,9 +2188,15 @@ input[type="submit"].button--reverse-blue {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+  .page-template-template-team .team .ot:nth-child(2n+1) .ot__image {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
   .page-template-template-team .team .ot:nth-child(2n+1) .ot__presentation {
-    padding-right: 0;
-    padding-left: 2em;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
   }
 }
 

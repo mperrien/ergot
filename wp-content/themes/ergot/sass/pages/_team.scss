@@ -3,9 +3,9 @@
     padding-right: 1em;
     padding-left: 1em;
     .ot {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-gap: 2em;
       margin: 4em 0;
 
       &__name {
@@ -20,21 +20,33 @@
 
         img {
           display: block;
+          width: 100%;
         }
       }
 
       @media (min-width: 50em) {
-        flex-direction: row;
-        .ot__presentation {
-          padding-right: 2em;
+        grid-template-columns: repeat(2, calc(50% - 1em));
+        
+        .ot__image {
+          justify-self: start;
+          image {
+            width: auto;
+            max-width: 100%;
+          }
         }
 
         &:nth-child(2n+1) {
           flex-direction: row-reverse;
   
+          .ot__image{
+            grid-column-start: 1;
+            justify-self: end;
+          }
+
           .ot__presentation {
-            padding-right: 0;
-            padding-left: 2em;
+            grid-column-start: 2;
+            // padding-right: 0;
+            // padding-left: 2em;
           }
         }
       }
