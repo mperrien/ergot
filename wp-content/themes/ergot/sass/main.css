@@ -2174,6 +2174,10 @@ input[type="submit"].button--reverse-blue {
     -ms-grid-columns: (calc(50% - 1em))[2];
         grid-template-columns: repeat(2, calc(50% - 1em));
   }
+  .page-template-template-team .team .ot__image, .page-template-template-team .team .ot__presentation {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
   .page-template-template-team .team .ot .ot__image {
     -ms-grid-column-align: start;
         justify-self: start;

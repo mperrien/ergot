@@ -27,6 +27,11 @@
       @media (min-width: 50em) {
         grid-template-columns: repeat(2, calc(50% - 1em));
         
+        &__image,
+        &__presentation {
+          grid-row-start: 1;
+        }
+
         .ot__image {
           justify-self: start;
           image {
